@@ -1,0 +1,68 @@
+h1 {
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+}
+.formulario{
+    width: 60%;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.formulario div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    border-radius: 10px;
+    height: 20px;
+    border:darkolivegreen 1px solid;
+}
+select{
+    border-radius: 10px;
+    height: 20px;
+    border:darkolivegreen 1px solid;
+}
+.boton{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 1em;
+}
+.guardar{
+    border-radius: 10px;
+    background-color: rgba(42, 120, 192, 0.733);
+    color: aliceblue;
+    border: none;
+    width: 150px;
+    height: 40px;
+    transition: transform .2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1); 
+    }
+}
+.cancelar{
+    border-radius: 10px;
+    background-color: rgba(192, 47, 42, 0.733);
+    color: aliceblue;
+    border: none;
+    width: 150px;
+    height: 40px;
+    transition: transform .2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1); 
+    }
+}

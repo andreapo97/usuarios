@@ -1,0 +1,36 @@
+<div>
+    <h1>Tabla de usuarios</h1>
+    <button (click)="crear()" class="Crear">Crear Usuario</button>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Fecha de nacimiento</th>
+                <th>Tipo de sexo</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of UsuarioList; track $index) {
+                <tr>
+                    <th>{{item.id}}</th>
+                    <th>{{item.nombre}}</th>
+                    <th>{{item.apellido}}</th>
+                    <th>{{item.correo}}</th>
+                    <th>{{item.direccion}}</th>
+                    <th>{{item.telefono}}</th>
+                    <th>{{item.fechaNacimiento}}</th>
+                    <th>{{item.sexName}}</th>
+                    <th><img style="width: 10px;" (click)="editarUsuario(item.id)" src="https://cdn-icons-png.flaticon.com/512/1160/1160515.png" alt=""></th>
+                    <th><img style="width: 10px;" (click)="deletUser(item.id)" src="https://cdn-icons-png.flaticon.com/512/3807/3807871.png" alt=""></th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

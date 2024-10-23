@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UsuariosComponent } from './components/usuarios/listaUsuarios/usuarios.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,3 +13,4 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'usuarios';
 }
+

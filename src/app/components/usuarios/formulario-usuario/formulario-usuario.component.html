@@ -1,0 +1,42 @@
+<h1>Crear Usuario</h1>
+<form [formGroup]="formularioU" class="formulario">
+  <div>
+    <label>Nombre</label>
+    <input formControlName="nombre" type="text" />
+  </div>
+  <div>
+    <label>Apellido</label>
+    <input formControlName="apellido" type="text" />
+  </div>
+  <div>
+    <label>Direccion</label>
+    <input formControlName="direccion" type="text" />
+  </div>
+  <div>
+    <label>Telefono</label>
+    <input formControlName="telefono" type="number" />
+  </div>
+  <div>
+    <label>Correo</label>
+    <input formControlName="correo" type="email" />
+  </div>
+  <div>
+    <label>Sexo</label>
+    <select formControlName="idSex">
+        <option value="">Seleccione</option>
+        @for (item of sexos; track $index) {
+            <option [value]="item.id">{{item.tipo}}</option>
+        }
+    </select>
+  </div>
+  <div>
+    <label>Fecha de nacimiento</label>
+    <input formControlName="fechaNacimiento" type="date" />
+  </div>
+</form>
+<div class="boton">
+    <button (click)="guardar()" class="guardar">Guardar</button>
+    <button (click)="cancelar()" class="cancelar">Cancelar</button>
+</div>
+
+
